@@ -5,6 +5,14 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const newDeposit = depositField.value;
     //Convert the new deposit amount from string to float
     const newDepositAmount = parseFloat(newDeposit);
+    //Clear the input field after deposit
+    depositField.value = '';
+
+    //Error handler for invalid input or less than amount 0
+    if(isNaN(newDepositAmount) || newDepositAmount <= 0){
+        alert('Please input Valid Amount');
+        return;
+    }
 
     //Get the current deposit balance placeholder
     const depositPlaceholder  = document.getElementById('deposit-amount');
@@ -12,7 +20,6 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const currentDeposit = depositPlaceholder.innerText;
     //Convert the current deposit amount from string to float
     const currentDepositAmount = parseFloat(currentDeposit);
-
     //Calculate the Total Deposit amount
     const totalDepositAmount = currentDepositAmount + newDepositAmount;
 
@@ -33,7 +40,4 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
 
     //Set the updated main balance to it's placeholder
     mainBalancePlaceholder.innerText = updatedMainBalance;
-
-    //Clear the input field after deposit
-    depositField.value = '';
 })
