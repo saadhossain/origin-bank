@@ -25,10 +25,12 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     //Calculate the total withdraw amount
     const totalWithdrawAmount = currentWithdrawAmount + newWithdrawAmount;
     //Error handler, if withdraw amount is large than current balance
+    /*--------------------------
     if(newWithdraw > currentBalance){
         alert('Sorry! You dont have enough money!');
         return;
     }
+    -------------------------*/
     //Set the total Withdraw amount to the withdraw amount placeholder
     withdrawPlaceholder.innerText = totalWithdrawAmount;
     //Now reduce/ deduct the main balance based on withdraw amount
