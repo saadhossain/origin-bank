@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin Bank - Login</title>
+    <link rel="shortcut icon" href="img/origin-bank-icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main-container flex items-center">
+        <div class="container login-from mx-auto p-5 md:p-6 w-9/12 rounded-lg bg-indigo-400">
+            <img src="img/origin-bank-logo.png" alt="" class="block mx-auto">
+            <h1 class="text-3xl text-cyan-900 text-center font-bold">Origin Bank LTD.</h1>
+            <h1 class="text-xl md:text-4xl text-white text-center">Please Login to Your Account</h1>
+            <div class="flex flex-col items-center">
+                <input type="email" id="email-field" class="block w-full md:w-2/4 rounded p-2 my-3 focus:outline-none"
+                    placeholder="Please Enter your Email">
+                <input type="password" id="pass-field" class="block w-full md:w-2/4 rounded p-2 my-3 focus:outline-none"
+                    placeholder="Please Enter your Password">
+                <button id="login-btn" class="block w-full md:w-2/4 rounded p-2 my-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 font-bold uppercase text-white">Login</button>
+            </div>
+        </div>
+    </main>
+    <!-- Connect Javascript file -->
+    <script src="js/login.js"></script>
+</body>
+
+</html>

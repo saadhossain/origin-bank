@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin Bank - Dashboard</title>
+    <link rel="shortcut icon" href="img/origin-bank-icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main-container flex flex-col items-center">
+        <div class="container login-from mx-auto p-5 md:p-6 mt-5 w-9/12 rounded-lg bg-indigo-400">
+            <img src="img/origin-bank-logo.png" alt="" class="block mx-auto">
+            <h1 class="text-3xl text-cyan-900 text-center font-bold">Origin Bank LTD.</h1>
+            <h1 class="text-xl md:text-4xl text-white text-center">Welcome to Origin Bank LTD.</h1>
+            
+        </div>
+        <!-- Balance grid -->
+        <div class="grid grid-cols-3 my-5 gap-5 w-9/12">
+            <!-- Deposit box -->
+            <div class="bg-purple-500 p-5 rounded-xl">
+                <h3 class="text-3xl font-semibold text-white">Deposit</h3>
+                <h1 class="text-4xl font-bold text-white">$<span id="deposit-amount">50</span></h1>
+            </div>
+            <!-- Withdraw box -->
+            <div class="bg-amber-500 p-5 rounded-xl">
+                <h3 class="text-3xl font-semibold text-white">Withdraw</h3>
+                <h1 class="text-4xl font-bold text-white">$<span id="withdraw-amount">80</span></h1>
+            </div>
+            <!-- Balance box -->
+            <div class="bg-fuchsia-500 p-5 rounded-xl">
+                <h3 class="text-3xl font-semibold text-white">Balance</h3>
+                <h1 class="text-4xl font-bold text-white">$<span id="balance-amount">350</span></h1>
+            </div>
+        </div>
+
+        <!-- Deposit and Withdraw Field Area -->
+        <div class="grid grid-cols-2 my-5 gap-5 w-9/12">
+            <!-- Deposit input box -->
+            <div class="bg-purple-500 p-5 rounded-xl">
+                <h3 class="text-3xl font-semibold text-white">Please Deposit</h3>
+                <input type="text" id="desopit-field" class="block w-full md:w-3/4 rounded p-2 my-3 focus:outline-none"
+                    placeholder="$ Enter Amount your want to Deposit">
+                <button id="deposit-btn" class="block w-full md:w-2/4 rounded p-2 my-3 bg-gradient-to-r bg-amber-500 font-bold uppercase text-white">Deposit</button>
+            </div>
+            <!-- Withdraw input box -->
+            <div class="bg-amber-500 p-5 rounded-xl">
+                <h3 class="text-3xl font-semibold text-white">Please Withdraw</h3>
+                <input type="text" id="withdraw-field" class="block w-full md:w-3/4 rounded p-2 my-3 focus:outline-none"
+                    placeholder="$ Enter Amount your want to Withdraw">
+                <button id="withdraw-btn" class="block w-full md:w-2/4 rounded p-2 my-3 bg-gradient-to-r bg-purple-500 font-bold uppercase text-white">Withdraw</button>
+            </div>
+        </div>
+
+    </main>
+    <!-- Connect Javascript file -->
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+
+</html>
